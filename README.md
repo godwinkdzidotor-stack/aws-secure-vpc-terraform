@@ -28,7 +28,7 @@ This repository contains Terraform code to deploy a **secure, multi-tier AWS VPC
 
 ## 🚀 Usage
 
-```bash
+--- bash
 git clone https://github.com/<your-username>/aws-secure-vpc-terraform.git
 cd aws-secure-vpc-terraform
 
