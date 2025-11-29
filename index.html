@@ -42,6 +42,56 @@
     }
     .inner{position:relative;z-index:1;padding:20px 22px 24px}
     @media(min-width:900px){.inner{padding:24px 28px 28px}}
+
+    /* =========================== */
+    /*  TOP BUTTON ROW – NEW      */
+    /* =========================== */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .home-btn {
+      padding: 8px 16px;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      border: 1px solid rgba(148,163,184,0.3);
+      border-radius: 12px;
+      color: #e2e8f0;
+      font-size: 13px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.25s ease-out;
+    }
+    .home-btn:hover {
+      background: linear-gradient(135deg, #1e293b, #334155);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+    }
+
+    .close-btn {
+      padding: 8px 16px;
+      background: linear-gradient(135deg, #1e1b4b, #312e81);
+      border: 1px solid rgba(148,163,184,0.3);
+      border-radius: 12px;
+      color: #e2e8f0;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.25s ease-out;
+    }
+    .close-btn:hover {
+      background: linear-gradient(135deg, #312e81, #4338ca);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.45);
+    }
+
+    /* =========================== */
+    /* EXISTING STYLES CONTINUE…  */
+    /* =========================== */
+
     .top{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:18px}
     .brand{display:flex;align-items:center;gap:12px}
     .avatar{
@@ -63,6 +113,7 @@
       width:7px;height:7px;border-radius:999px;background:#22c55e;
       box-shadow:0 0 0 4px rgba(34,197,94,.25);
     }
+
     .hero{
       border-radius:var(--radius-xl);
       background:
@@ -72,23 +123,42 @@
       grid-template-columns:1.4fr 1fr;gap:18px;margin-bottom:20px;
     }
     @media(max-width:800px){.hero{grid-template-columns:1fr}}
+
     .hero-main h2{font-size:22px;margin-bottom:6px}
     .hero-main p{font-size:13px;color:var(--text-muted);max-width:470px}
+
     .hero-badges{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+
     .pill{
       font-size:11px;padding:5px 9px;border-radius:999px;
       background:rgba(15,23,42,.95);border:1px solid rgba(148,163,184,.55);
     }
+
     .hero-side{
       background:rgba(15,23,42,.96);border-radius:18px;
       border:1px solid rgba(55,65,81,.9);padding:10px 12px 12px;
       font-size:12px;display:grid;gap:8px;
     }
-    .badge-row{display:flex;flex-wrap:wrap;gap:6px}
-    .badge{
-      font-size:11px;padding:3px 8px;border-radius:999px;
-      background:rgba(15,23,42,.96);border:1px solid rgba(148,163,184,.9);color:var(--text-muted);
+
+    /* Unified pill styling */
+    .badge,
+    .foot-pill{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:4px 12px;
+      border-radius:9999px;
+      background:rgba(15,23,42,.96);
+      border:1px solid rgba(148,163,184,.9);
+      color:var(--text-muted);
+      font-size:11px;
+      line-height:1.2;
+      white-space:nowrap;
     }
+
+    .badge-row{display:flex;flex-wrap:wrap;gap:6px}
+
+    /* Tabs */
     .tabs{margin-top:8px}
     .tab-nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
     .tab-btn{
@@ -101,6 +171,7 @@
       background:linear-gradient(135deg,#15803d,#22c55e);border-color:transparent;
       color:#020617;box-shadow:0 10px 30px rgba(22,163,74,.55);transform:translateY(-1px);
     }
+
     .tab-panels{
       border-radius:18px;border:1px solid var(--border-subtle);
       background:radial-gradient(circle at top left,rgba(15,23,42,.98),#020617 70%);
@@ -108,8 +179,11 @@
     }
     .tab-panel{display:none;font-size:13px;color:var(--text-muted)}
     .tab-panel.active{display:block}
+
     .grid{display:grid;gap:12px}
     @media(min-width:760px){.grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+    /* Cards */
     .card{
       border-radius:16px;background:rgba(15,23,42,.98);
       border:1px solid rgba(55,65,81,.95);padding:10px 12px 12px;
@@ -119,16 +193,16 @@
       display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:6px;
     }
     .card-title{font-size:13px;font-weight:600}
+
     .card-tag{
       font-size:11px;padding:3px 8px;border-radius:999px;
       background:rgba(24,24,27,.96);border:1px solid rgba(148,163,184,.9);
     }
+
     .card-body ul{margin-top:6px;padding-left:16px;display:grid;gap:4px}
     .card-foot{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px;font-size:11px}
-    .foot-pill{
-      padding:3px 8px;border-radius:999px;
-      background:rgba(15,23,42,.96);border:1px solid rgba(55,65,81,.95);color:var(--text-muted);
-    }
+
+    /* Links */
     a.link{color:#22c55e;text-decoration:none;font-size:12px}
     a.link:hover{text-decoration:underline}
   </style>
@@ -136,6 +210,15 @@
 <body>
   <main class="shell">
     <div class="inner">
+
+      <!-- =============================== -->
+      <!--   BACK + CLOSE BUTTONS (NEW)   -->
+      <!-- =============================== -->
+      <div class="nav-buttons">
+        <a href="https://godwinkdzidotor-stack.github.io/" class="home-btn">⭠ Back to Homepage</a>
+        <button class="close-btn" onclick="window.close();">✖ Close Page</button>
+      </div>
+
       <header class="top">
         <div class="brand">
           <div class="avatar">GD</div>
@@ -194,8 +277,11 @@
         </nav>
 
         <div class="tab-panels">
+
+          <!-- PANEL: DESIGN -->
           <article id="design" class="tab-panel active">
             <div class="grid cols-2">
+
               <div class="card">
                 <div class="card-header">
                   <div class="card-title">Network Layout</div>
@@ -231,11 +317,14 @@
                   <span class="foot-pill">NAT Gateway</span>
                 </div>
               </div>
+
             </div>
           </article>
 
+          <!-- PANEL: SECURITY -->
           <article id="security" class="tab-panel">
             <div class="grid cols-2">
+
               <div class="card">
                 <div class="card-header">
                   <div class="card-title">Security Groups</div>
@@ -244,8 +333,8 @@
                 <div class="card-body">
                   <ul>
                     <li>Separate groups for bastion, web, and application tiers.</li>
-                    <li>Inbound rules limited to required ports and source ranges.</li>
-                    <li>Outbound rules restricted based on role of the instance.</li>
+                    <li>Inbound rules limited to least privilege.</li>
+                    <li>Outbound rules restricted based on instance role.</li>
                   </ul>
                 </div>
                 <div class="card-foot">
@@ -261,14 +350,16 @@
                 <div class="card-body">
                   <ul>
                     <li>Baseline NACLs aligned with subnet purpose.</li>
-                    <li>Additional deny rules for disallowed ranges as needed.</li>
-                    <li>Complement security groups without duplicating logic.</li>
+                    <li>Deny rules for disallowed ranges where needed.</li>
+                    <li>Complements security groups without duplication.</li>
                   </ul>
                 </div>
               </div>
+
             </div>
           </article>
 
+          <!-- PANEL: DEPLOY -->
           <article id="deploy" class="tab-panel">
             <div class="card">
               <div class="card-header">
@@ -279,9 +370,9 @@
                 <ol style="margin-left:16px;display:grid;gap:4px;">
                   <li>Clone the repository and configure AWS credentials.</li>
                   <li>Adjust <code>variables.tf</code> for CIDRs, region, and naming.</li>
-                  <li>Run <code>terraform init</code> to pull providers and modules.</li>
-                  <li>Run <code>terraform plan</code> to review changes.</li>
-                  <li>Run <code>terraform apply</code> to build the VPC.</li>
+                  <li>Run <code>terraform init</code> to pull providers.</li>
+                  <li>Run <code>terraform plan</code> to preview changes.</li>
+                  <li>Run <code>terraform apply</code> to deploy the VPC.</li>
                 </ol>
                 <p style="margin-top:8px;">
                   Full source:
@@ -292,6 +383,7 @@
               </div>
             </div>
           </article>
+
         </div>
       </section>
     </div>
